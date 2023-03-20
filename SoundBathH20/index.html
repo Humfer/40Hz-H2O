@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="main.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <audio controls id = "myAudio"  autoplay loop hidden>
+  <source src= "assets/underwater-ambience-6201.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+</head>
+
+<body>
+    <main>
+       <dive-content>
+           <dive-presentation>
+               <dive-slides>
+                    <video autoplay loop muted>
+                     <source src="assets/nogradient-wave.mp4" type="video/mp4">
+                       Your browser does not support the video tag.
+                   </video>
+               </dive-slides>
+           </dive-presentation>
+       </dive-content>
+       
+        <intro-content>
+            <intro-presentation>
+                <intro-slides>
+                    <intro-title> Welcome </intro-title>
+                    <intro-title class="side-text">to</intro-title>
+                </intro-slides>
+            </intro-presentation>
+        </intro-content>
+
+        <header-page>
+            <header class = "hero-header">
+                <div class="header-slides">
+                    <div class="header-content">
+                       <div class = "hero-text"> <h1>40Hz&amp;H<sub>2</sub>0</h1>
+                        <p>A SEA OF SOUND</p>
+                        <button type="button"  onclick="window.location.href='rsvp.html';">RSVP</button>
+                        </div>
+                        <div id="sketch-holder"></div>
+                    </div>
+                </div>
+            </header>
+        </header-page>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+html,
+body {
+    font-family: 'Inter', 'sans-serif';
+    font-style: italic;
+    padding: 0;
+    overflow-x: hidden;
+    background: none;
+
+    /*    background-size: 100% 100%;*/
+}
+
+/*CONTENTS
+- dive  17-44
+- intro 55-122
+- header 146-206
+*/
+
+/*dive page lines 17-44*/
+
+
+dive-content {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    /*    background-image: url("assets/Untitled_Artwork.mp4");*/
+}
+
+dive-slides {
+    left: 0%;
+    top: 0%;
+    width: 100vw;
+}
+
+dive-slides:before {
+    height: 60vh;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), #0D0C07);
+    background-size: 100% 100%;
+    transform: translateY(67%);
+}
+
+dive-slides > video {
+
+    height: 100vh;
+    width: 100vw;
+
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+/*intro page lines 55-122*/
+
+
+intro-content {
+    /*parentA*/
+    display: block;
+    background-color: lightgray;
+    background-color: #0D0C07;
+    width: 100vw;
+    height: 150vh;
+}
+
+intro-presentation {
+    /*childA1*/
+    display: block;
+    background-color: darkgray;
+    background-color: #0D0C07;
+    width: 60vw;
+    height: 30vh;
+    top: 70vh;
+    position: relative;
+}
+
+intro-slides {
+    /*childA2*/
+    display: block;
+    background-color: #0D0C07;
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+    bottom: 0;
+}
+
+
+intro-title {
+    /*childA3*/
+    display: inline-block;
+    position: relative;
+}
+
+
+intro-slides.active {
+    animation: fade-out 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    position: relative;
+    animation-timing-function: ease-in;
+
+}
+
+intro-title:nth-child(1) {
+    font-size: 20vmin;
+    color: white;
+    position: absolute;
+    filter: blur(0);
+    opacity: 1;
+    bottom: 0;
+
+}
+
+intro-title:nth-child(2) {
+    font-size: 9vmin;
+    color: white;
+    position: absolute;
+    bottom: 2.6vh;
+    left: 16ch;
+    filter: blur(0);
+    opacity: 1;
+}
+
+
+/*fade animation*/
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+
+    }
+
+    100% {
+        opacity: 0;
+        filter: blur(10);
+        transform: scale(0.94);
+        transform: translate(5vmin, -5vmin);
+
+    }
+}
+
+/*Header page lines 146-206*/
+
+header-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0D0C07;
+    display: flex;
+    align-items: center;
+    z-index: -3;
+}
+
+.hero-header {
+    height: 100%;
+
+}
+
+.header-slides {
+    width: 100vw;
+    display: block;
+    font-family: 'Questrial', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.header-slides.active2 {
+    animation: expand 3s .3s forwards cubic-bezier(0.25, 0.1, 0.25, 1);
+    position: relative;
+    animation-timing-function: ease;
+
+}
+
+.header-content {
+    position: relative;
+    /*    left: 60%;*/
+    color: white;
+
+}
+
+.hero-text {
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    top: 45%;
+    /*    right:60%;*/
+
+}
+
+.hero-text button {
+    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-right: 2em;
+    padding-left: 2em;
+    margin: 3%;
+    'Inter',
+    'sans-serif';
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2vmin;
+}
+
+.hero-text a {
+    text-decoration: none;
+    color: #0D0C07;
+    letter-spacing: 0.2em;
+}
+
+
+.header-content h1 {
+    display: flex;
+    font-size: 10vmin;
+    align-items: baseline;
+    justify-content: center;
+
+}
+
+.header-content p {
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+}
+
+
+
+@keyframes expand {
+    0% {
+        letter-spacing: 0.1em;
+
+    }
+
+    100% {
+        letter-spacing: 0.4em;
+    }
+}
+
+/*RSVP form*/
+
