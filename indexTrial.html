@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="main.js"></script>
+    <script src="sketch.js"></script>
+    <script src="soundline.js"></script>
+<!--    <script src="frequencyGraph.js"></script>-->
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <!--
+    <audio controls id="myAudio" autoplay loop hidden>
+        <source src="assets/underwater-ambience-6201.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+-->
+</head>
+<body>
+    <main>
+         <intro-content>
+            <intro-presentation>
+                <intro-breath>
+                    <text-box id="breath-title">Breathe.</text-box>
+                    <breath-content>
+                        <div class="ellipse-breath"></div>
+                        <text-box class="paragraph">
+                            <p><b>Please grant the microphone permission to enter a sea of sound.</b> <br><br>Take a deep breath. Slowly inhale and exhale. <br><br> Did you see that? How did it feel? We are about to visualize and create form with the noise surrounding ourselves.</p>
+                        </text-box>
+                        <div id="sketch-breath"></div>
+                    </breath-content>
+                </intro-breath>
+
+                <intro-listen>
+                    <text-box id="listen-title"></text-box>
+                    <listen-content>
+                        <div class="ellipse-listen"></div>
+                        <div id="sketch-listen"> </div>
+                            <text-box class="paragraph">
+                                <p>Sand on plates resonating at varying frequencies take on captivating two-dimensional standing wave patterns, characterized by distinct nodes. The accompanying interactive offers a graphical depiction of these nodal patterns across a range of frequencies. This is how we will create architecture using sound as impactful material.</p>
+                            </text-box>
+                    </listen-content>
+                </intro-listen>
+            </intro-presentation>
+        </intro-content>
+    </main>
+</body>

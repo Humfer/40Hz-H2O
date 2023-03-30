@@ -1,13 +1,13 @@
-let hz161;
-let hz89;
-let hz230;
-let hz346;
-let hz478;
-let hz590;
+var hz161;
+var hz89;
+var hz230;
+var hz346;
+var hz478;
+var hz590;
 
-let posX = 0;
-let posY = 0;
-let easing = 0.2;
+var posX = 0;
+var posY = 0;
+var easing = 0.2;
 
 var canvas3;
 var wi;
@@ -18,7 +18,7 @@ function setup() {
     wi = windowHeight * 0.6;
     hei = wi;
     canvas3 = createCanvas(wi, hei);
-//    canvas3.parent('sketch-listen');
+    canvas3.parent('sketch-listen');
     strokeWeight(2);
 
     // noLoop();
@@ -36,8 +36,8 @@ function preload() {
 }
 
 function draw() {
-    let targetX = mouseX;
-    let targetY = mouseY;
+    var targetX = mouseX;
+    var targetY = mouseY;
     // console.log(mouseX);
 
     if (mouseX < 0 || mouseX >= width || mouseY <= 0 || mouseY > height) {
@@ -69,24 +69,24 @@ function draw() {
     }
     posX += (targetX - posX) * easing; //finds the difference between your mouse position and where the actual drawn line is and moves it [eased] percentage of the way. This way, it will never reach the position of mouseX at the same time that mouseX is there.
     posY += (targetY - posY) * easing;
-    let a = map(posX, 0, width, -10, 10); // replace with your desired value
-    const b = 1; // replace with your desired value
-    let m = map(posY, 0, width, -10, 10); // replace with your desired value
-    const n = 2; // replace with your desired value
-    const gridSize = 6;
-    const halfWidth = width / 2;
-    const halfHeight = height / 2;
+   var a = mapvar(posX, 0, width, -10, 10); // replace with your desired value
+    var b = 1; // replace with your desired value
+    var m = map(posY, 0, width, -10, 10); // replace with your desired value
+    var n = 2; // replace with your desired value
+    var gridSize = 6;
+    var halfWidth = width / 2;
+    var halfHeight = height / 2;
     background(13, 12, 7);
-    for (let x = -halfWidth; x < halfWidth; x += gridSize) {
-        for (let y = -halfHeight; y < halfHeight; y += gridSize) {
-            const x1 = x + halfWidth;
-            const y1 = y + halfHeight;
-            const equationValue =
+    for (var x = -halfWidth; x < halfWidth; x += gridSize) {
+        for (var y = -halfHeight; y < halfHeight; y += gridSize) {
+            var x1 = x + halfWidth;
+            var y1 = y + halfHeight;
+            var equationValue =
                 a * sin((PI * n * x1) / 180) * sin((PI * m * y1) / 180) +
                 b * sin((PI * m * x1) / 180) * sin((PI * n * y1) / 180);
-            const hue = equationValue < 0 ? 0 : 200; // color negative values red, positive values blue
-            const saturation = 1;
-            const brightness = 1;
+            var hue = equationValue < 0 ? 0 : 200; // color negative values red, positive values blue
+            var saturation = 1;
+            var brightness = 1;
             fill(252, 237, 197, hue);
             noStroke(); // disable filling
             ellipse(x1, y1, gridSize, gridSize); // draw rectangle instead of square

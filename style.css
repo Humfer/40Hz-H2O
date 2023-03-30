@@ -91,7 +91,7 @@ intro-presentation {
 intro-breath {
     display: block;
     justify-content: center;
-    background-color: darkblue;
+    background-color:#0D0C07 ;
     position: relative;
     top: 5vh;
     padding: 6vh;
@@ -123,7 +123,7 @@ breath-content {
     height: 70vh;
     position: relative;
     top: 4vh;
-        background-color: mediumvioletred;
+/*        background-color: mediumvioletred;*/
 }
 
 breath-content text-box {
@@ -137,7 +137,7 @@ breath-content text-box {
     /*sketch*/
     position: relative;
     left: 8%;
-    background-color: aquamarine;
+/*    background-color: aquamarine;*/
     z-index: 1;
 }
 

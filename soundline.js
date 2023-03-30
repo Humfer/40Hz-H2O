@@ -6,10 +6,9 @@ var canvas2;
 var wid;
 var hei;
 
-
 function setup() {
   wid = windowHeight * 0.6;
-  hei = wi;
+  hei = wid;
   canvas2 = createCanvas(wid, hei);
   canvas2.parent('sketch-breath');
   mic = new p5.AudioIn();
@@ -17,8 +16,8 @@ function setup() {
 }
 
 function draw() {
-     clear();
-  background(13,12,7, 1);
+  clear();
+  background(13,12,7, 1); 
   var vol = mic.getLevel();
   // console.log(vol);
   line(100, 0, 600, height);
