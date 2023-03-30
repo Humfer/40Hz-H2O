@@ -104,7 +104,6 @@ text-box {
 }
 
 .paragraph {
-    width: 40vw;
     display: flex;
     align-items: center;
     font-weight: 400;
@@ -131,6 +130,7 @@ breath-content text-box {
     margin-left: 7%;
     position: relative;
     top: -20%;
+    width: 40vw;
 }
 
 #sketch-breath {
@@ -141,13 +141,6 @@ breath-content text-box {
     z-index: 1;
 }
 
-#sketch-listen {
-    /*sketch*/
-    position: relative;
-/*    left: 8%;*/
-/*    background-color: aquamarine;*/
-    z-index: 1;
-}
 #breath-title {
     font-weight: bold;
     font-size: 2.5em;
@@ -175,17 +168,30 @@ listen-content {
      display: flex;
     flex-direction: row;
     align-items: center;
-/*        padding: 20px;*/
+        padding: 20px;
     grid-row-gap: 4.479vw;
     /*    position: absolute;*/
     width: 100vw-6vh;
 /*    background-color: darkgoldenrod;*/
-    height: 70vh;
+    height: 80vh;
       position: relative;
     top: 1vh;
 }
 
+listen-content text-box{
+    margin-left: 17%;
+    position: relative;
+    top: -10%;
+    width: 36vw;;
+}
 
+#sketch-listen {
+    /*sketch*/
+    position: relative;
+    left: 5%;
+/*    background-color: aquamarine;*/
+    z-index: 1;
+}
 
 .ellipse-breath {
     position: absolute;
@@ -200,8 +206,8 @@ listen-content {
 
 .ellipse-listen {
     position: absolute;
-    width: 65vmin;
-    height: 65vmin;
+    width: 80vmin;
+    height: 80vmin;
     left: 5%;
     top: 0vh;
     border-radius: 50%;

@@ -108,7 +108,7 @@ var s2 = function (sketcha) {
   
   
   sketcha.setup = function () {
-    wi = sketcha.windowHeight * 0.6;
+    wi = sketcha.windowHeight * 0.55;
     hei = wi;
     let canvas2 = sketcha.createCanvas(wi, hei);
     canvas2.parent("sketch-listen");
