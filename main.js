@@ -35,4 +35,4 @@ function reveal2() {
 
 window.addEventListener("scroll", reveal);
 window.addEventListener("scroll", reveal2);
-document.getElementById("myAudio").volume = 0.2;
+//document.getElementById("myAudio").volume = 0.2;

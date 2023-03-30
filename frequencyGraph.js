@@ -25,51 +25,51 @@ function setup() {
     // colorMode(RGB, 360, 1, 1);
 }
 
-function preload() {
-    // Load sounds here
-    hz161 = loadSound("assets/161Hz.mp3");
-    hz89 = loadSound("assets/89Hz.mp3");
-    hz230 = loadSound("assets/230Hz.mp3");
-    hz346 = loadSound("assets/346Hz.mp3");
-    hz478 = loadSound("assets/478hz.mp3");
-    hz590 = loadSound("assets/590Hz.mp3");
-}
+// function preload() {
+//     // Load sounds here
+//     hz161 = loadSound("assets/161Hz.mp3");
+//     hz89 = loadSound("assets/89Hz.mp3");
+//     hz230 = loadSound("assets/230Hz.mp3");
+//     hz346 = loadSound("assets/346Hz.mp3");
+//     hz478 = loadSound("assets/478hz.mp3");
+//     hz590 = loadSound("assets/590Hz.mp3");
+// }
 
 function draw() {
     var targetX = mouseX;
     var targetY = mouseY;
     // console.log(mouseX);
 
-    if (mouseX < 0 || mouseX >= width || mouseY <= 0 || mouseY > height) {
-        hz161.stop();
-        hz89.stop();
-        hz230.stop();
-        hz346.stop();
-        hz478.stop();
-        hz590.stop();
-    } else if (mouseX >= (width * 5) / 6) {
-        playSound(hz89);
-    } else if (mouseX >= (width * 2) / 3) {
-        hz89.stop();
-        playSound(hz161);
-        hz230.stop();
-    } else if (mouseX >= width / 2) {
-        hz161.stop();
-        playSound(hz230);
-        hz478.stop();
-    } else if (mouseX >= width / 3) {
-        hz230.stop();
-        playSound(hz478);
-        hz590.stop();
-    } else if (mouseX > 0) {
-        hz478.stop();
-        playSound(hz590);
-    } else {
-        hz590.stop();
-    }
+    // if (mouseX < 0 || mouseX >= width || mouseY <= 0 || mouseY > height) {
+    //     hz161.stop();
+    //     hz89.stop();
+    //     hz230.stop();
+    //     hz346.stop();
+    //     hz478.stop();
+    //     hz590.stop();
+    // } else if (mouseX >= (width * 5) / 6) {
+    //     playSound(hz89);
+    // } else if (mouseX >= (width * 2) / 3) {
+    //     hz89.stop();
+    //     playSound(hz161);
+    //     hz230.stop();
+    // } else if (mouseX >= width / 2) {
+    //     hz161.stop();
+    //     playSound(hz230);
+    //     hz478.stop();
+    // } else if (mouseX >= width / 3) {
+    //     hz230.stop();
+    //     playSound(hz478);
+    //     hz590.stop();
+    // } else if (mouseX > 0) {
+    //     hz478.stop();
+    //     playSound(hz590);
+    // } else {
+    //     hz590.stop();
+    // }
     posX += (targetX - posX) * easing; //finds the difference between your mouse position and where the actual drawn line is and moves it [eased] percentage of the way. This way, it will never reach the position of mouseX at the same time that mouseX is there.
     posY += (targetY - posY) * easing;
-   var a = mapvar(posX, 0, width, -10, 10); // replace with your desired value
+   var a = map(posX, 0, width, -10, 10); // replace with your desired value
     var b = 1; // replace with your desired value
     var m = map(posY, 0, width, -10, 10); // replace with your desired value
     var n = 2; // replace with your desired value
