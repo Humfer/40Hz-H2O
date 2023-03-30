@@ -23,12 +23,13 @@ body {
 
 /*dive page lines 17-44*/
 
+/*
 
 dive-content {
     width: 100vw;
     height: 100vh;
     display: block;
-    /*    background-image: url("assets/Untitled_Artwork.mp4");*/
+        background-image: url("assets/Untitled_Artwork.mp4");
 }
 
 dive-slides {
@@ -58,6 +59,7 @@ dive-slides > video {
     object-fit: cover;
     overflow: hidden;
 }
+*/
 
 
 /*intro page lines 55-122*/
@@ -66,21 +68,139 @@ dive-slides > video {
 intro-content {
     /*parentA*/
     display: block;
-    background-color: lightgray;
+    /*    background-color: lightgray;*/
     background-color: #0D0C07;
     width: 100vw;
-    height: 150vh;
+    /*    top: -10px;*/
+    height: 500vh;
 }
 
 intro-presentation {
     /*childA1*/
     display: block;
+    /*
     background-color: darkgray;
     background-color: #0D0C07;
-    width: 60vw;
-    height: 30vh;
-    top: 70vh;
+*/
+    width: 100vw;
+    height: 255vh;
+    top: -5.5vh;
     position: relative;
+}
+
+intro-breath {
+    display: block;
+    justify-content: center;
+    background-color: darkblue;
+    position: relative;
+    top: 5vh;
+    padding: 6vh;
+
+}
+
+text-box {
+    color: white;
+    z-index: 1;
+}
+
+.paragraph {
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+breath-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*    padding: 20px;*/
+    grid-row-gap: 4.479vw;
+    display: flex;
+    /*    position: absolute;*/
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+    top: 4vh;
+        background-color: mediumvioletred;
+}
+
+breath-content text-box {
+    /*    margin-right: 5%;*/
+    margin-left: 7%;
+    position: relative;
+    top: -20%;
+}
+
+#sketch-breath {
+    /*sketch*/
+    position: relative;
+    left: 8%;
+    background-color: aquamarine;
+    z-index: 1;
+}
+
+#breath-title {
+    font-weight: bold;
+    font-size: 2.5em;
+    position: relative;
+    left: 4%;
+}
+
+intro-listen {
+    display: block;
+    justify-content: center;
+/*    background-color: darkgreen;*/
+    position: relative;
+    top: 5vh;
+    padding: 6vh;
+}
+
+#listen-title{
+    font-weight: bold;
+    font-size: 2.5em;
+    position: relative;
+    left: 37%;
+}
+
+listen-content {
+     display: flex;
+    flex-direction: row;
+    align-items: center;
+/*        padding: 20px;*/
+    grid-row-gap: 4.479vw;
+    /*    position: absolute;*/
+    width: 100vw-6vh;
+/*    background-color: darkgoldenrod;*/
+    height: 70vh;
+      position: relative;
+    top: 1vh;
+}
+
+
+
+.ellipse-breath {
+    position: absolute;
+    width: 65vmin;
+    height: 65vmin;
+    left: 50%;
+    top: 0vh;
+    border-radius: 50%;
+
+    background: radial-gradient(50% 50% at 50% 50%, rgba(13, 12, 7, 0.72) 72.92%, #CABDA0 100%);
+}
+
+.ellipse-listen {
+    position: absolute;
+    width: 65vmin;
+    height: 65vmin;
+    left: 5%;
+    top: 0vh;
+    border-radius: 50%;
+    z-index: 0;
+
+    background: radial-gradient(50% 50% at 50% 50%, #CABDA0 0%, #0D0C07 100%);
 }
 
 intro-slides {
@@ -89,7 +209,7 @@ intro-slides {
     background-color: #0D0C07;
     position: relative;
     width: 100vw;
-    height: 30vh;
+    height: 255vh;
     bottom: 0;
 }
 
@@ -241,4 +361,3 @@ header-page {
 }
 
 /*RSVP form*/
-

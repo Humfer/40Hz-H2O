@@ -8,19 +8,52 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="main.js"></script>
     <script src="sketch.js"></script>
+    <script src="soundline.js"></script>
+    <script src="frequencyGraph.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet" />
     <meta charset="utf-8" />
-    <audio controls id = "myAudio"  autoplay loop hidden>
-  <source src= "assets/underwater-ambience-6201.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+    <!--
+    <audio controls id="myAudio" autoplay loop hidden>
+        <source src="assets/underwater-ambience-6201.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+-->
 </head>
 
 <body>
     <main>
+        <wave-top>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100vw" height="1080" fill="none">
+                <path fill="#1E1E1E" d="M0 0h1920v1082H0z" />
+                <g clip-path="url(#a)">
+                    <g clip-path="url(#b)">
+                        <path fill="#A7A7A9" d="m0 727.203 35.627 21.529c35.413 21.529 106.666 64.587 177.706 79.299 71.04 14.532 142.294.897 213.334-13.456 71.04-14.352 142.293-29.423 213.333-66.381 71.04-37.138 142.293-96.343 213.333-129.892 71.04-33.37 142.294-41.264 213.337-45.031 71.04-3.947 142.29-3.947 213.33 18.837 71.04 22.606 142.29 68.176 213.33 81.631 71.04 13.456 142.3-5.202 213.34-27.629 71.04-22.426 142.29-48.619 177.7-61.896l35.63-13.096v505.932H0V727.203Z" />
+                        <path fill="#838284" d="m0 727.203 35.627 3.588c35.413 3.589 106.666 10.765 177.706-1.256 71.04-11.841 142.294-43.058 213.334-54.36 71.04-11.303 142.293-3.05 213.333-4.844 71.04-1.794 142.293-13.635 213.333-16.147 71.04-2.332 142.294 4.844 213.337-2.871 71.04-7.894 142.29-30.499 213.33 4.486 71.04 34.984 142.29 127.559 213.33 123.433 71.04-4.127 142.3-105.313 213.34-144.783 71.04-39.47 142.29-17.223 177.7-6.279l35.63 11.123v437.757H0V727.203Z" />
+                        <path fill="#6F6F6F" d="m0 883.289 35.627-20.094c35.413-19.914 106.666-60.102 177.706-72.661 71.04-12.558 142.294 2.512 213.334 6.1 71.04 3.589 142.293-4.306 213.333-10.585 71.04-6.279 142.293-10.944 213.333 14.353 71.04 25.476 142.294 81.093 213.337 80.734 71.04-.18 142.29-56.514 213.33-54.002 71.04 2.332 142.29 63.331 213.33 93.831 71.04 30.499 142.3 30.499 213.34 21.529 71.04-8.971 142.29-26.912 177.7-35.882l35.63-8.971v179.409H0V883.289Z" />
+                        <path fill="#2B2B2B" d="m0 895.05 35.627-16.506c35.413-16.326 106.666-49.337 177.706-62.972 71.04-13.815 142.294-8.432 213.334 9.867C497.707 843.56 568.96 874.777 640 882.132c71.04 7.536 142.293-8.611 213.333-13.635 71.04-5.202 142.294.897 213.337-5.741 71.04-6.638 142.29-25.655 213.33-13.455 71.04 12.199 142.29 55.975 213.33 74.992 71.04 19.197 142.3 13.815 213.34-12.737 71.04-26.732 142.29-74.455 177.7-98.496l35.63-23.861v288.851H0v-183Z" />
+                        <path fill="#0D0C07" d="m0 913.788 35.627 5.024c35.413 5.202 106.666 15.249 177.706 32.652 71.04 17.403 142.294 41.802 213.334 43.955 71.04 2.153 142.293-18.3 213.333-40.008 71.04-21.888 142.293-45.211 213.333-47.364 71.04-1.973 142.294 17.044 213.337 26.373 71.04 9.329 142.29 8.612 213.33 17.941 71.04 9.329 142.29 28.347 213.33 40.008 71.04 11.661 142.3 15.971 213.34 8.071 71.04-7.712 142.29-27.447 177.7-37.314l35.63-9.868v123.792H0V913.788Z" />
+                        <path fill="url(#c)" d="M0 0h1920v1082H0z" />
+                    </g>
+                </g>
+                <defs>
+                    <clipPath id="a">
+                        <path fill="#fff" d="M0 0h1920v6456H0z" />
+                    </clipPath>
+                    <clipPath id="b">
+                        <path fill="#fff" d="M0 0h1920v1082H0z" />
+                    </clipPath>
+                    <linearGradient id="c" x1="960" x2="960" y1="0" y2="1082" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#fff" stop-opacity=".3" />
+                        <stop offset="1" stop-color="#0D0C07" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </wave-top>
+        <!--
        <dive-content>
            <dive-presentation>
                <dive-slides>
@@ -31,9 +64,32 @@
                </dive-slides>
            </dive-presentation>
        </dive-content>
-       
+-->
+
         <intro-content>
             <intro-presentation>
+                <intro-breath>
+                    <text-box id="breath-title">Breathe.</text-box>
+                    <breath-content>
+                        <div class="ellipse-breath"></div>
+                        <text-box class="paragraph">
+                            <p><b>Please grant the microphone permission to enter a sea of sound.</b> <br><br>Take a deep breath. Slowly inhale and exhale. <br><br> Did you see that? How did it feel? We are about to visualize and create form with the noise surrounding ourselves.</p>
+                        </text-box>
+                        <div id="sketch-breath"></div>
+                    </breath-content>
+                </intro-breath>
+
+                <intro-listen>
+                    <text-box id="listen-title"></text-box>
+                    <listen-content>
+                        <div class="ellipse-listen"></div>
+                        <div id="sketch-listen">
+                            <text-box class="paragraph">
+                                <p>Sand on plates resonating at varying frequencies take on captivating two-dimensional standing wave patterns, characterized by distinct nodes. The accompanying interactive offers a graphical depiction of these nodal patterns across a range of frequencies. This is how we will create architecture using sound as impactful material.</p>
+                            </text-box>
+                        </div>
+                    </listen-content>
+                </intro-listen>
                 <intro-slides>
                     <intro-title> Welcome </intro-title>
                     <intro-title class="side-text">to</intro-title>
@@ -42,12 +98,13 @@
         </intro-content>
 
         <header-page>
-            <header class = "hero-header">
+            <header class="hero-header">
                 <div class="header-slides">
                     <div class="header-content">
-                       <div class = "hero-text"> <h1>40Hz&amp;H<sub>2</sub>0</h1>
-                        <p>A SEA OF SOUND</p>
-                        <button type="button"  onclick="window.location.href='rsvp.html';">RSVP</button>
+                        <div class="hero-text">
+                            <h1>40Hz&amp;H<sub>2</sub>0</h1>
+                            <p>A SEA OF SOUND</p>
+                            <button type="button" onclick="window.location.href='rsvp.html';">RSVP</button>
                         </div>
                         <div id="sketch-holder"></div>
                     </div>
