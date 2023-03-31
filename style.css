@@ -197,12 +197,12 @@ listen-content text-box {
 intro-heal {
     display: flex;
     justify-content: center;
-/*        background-color: darkgreen;*/
+    /*        background-color: darkgreen;*/
     position: relative;
     top: 5vh;
     padding: 6vh;
     height: 100vh;
-/*    background-color: royalblue;*/
+    /*    background-color: royalblue;*/
 }
 
 #heal-title {
@@ -216,13 +216,15 @@ intro-heal {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
 /*    background-color: coral;*/
-    width: 55.990vw;
+    width: 57vw;
+    top: 20%;
 
-    margin:auto;
+
+    margin: auto;
 }
 
 .Top1 {
@@ -230,8 +232,8 @@ intro-heal {
     flex: none;
     order: 0;
     flex-grow: 0;
-/*    background-color: skyblue;*/
-    width: 55.990vw; 
+    /*    background-color: skyblue;*/
+    width: 55.990vw;
     height: 42px;
     justify-content: center;
 
@@ -240,11 +242,177 @@ intro-heal {
 
 .Top1-rect {
     position: relative;
-    width: 56vw; 
-    top: 0.625vw;
+    width: 56vw;
+    height: 55px;
+    top: -.5vw;
     background: #4C473A;
     filter: blur(2.5px);
     border-radius: 5px;
+}
+
+.Top2 {
+    display: flex;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /*    background-color: skyblue;*/
+    width: 53.385vw;
+    height: 42px;
+    justify-content: center;
+    margin-top: 30px;
+
+
+}
+
+.Top2-rect {
+    position: relative;
+    width: 54vw;
+    top: 0.625vw;
+    background: rgba(76, 71, 58, 0.9);
+    filter: blur(2px);
+}
+
+.Top3 {
+    display: flex;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /*    background-color: skyblue;*/
+    width: 50.781vw;
+    height: 42px;
+    justify-content: center;
+    margin-top: 30px;
+
+
+}
+
+.Top3-rect {
+    position: relative;
+    width: 51vw;
+    top: 0.625vw;
+    background: rgba(76, 71, 58, 0.81);
+    filter: blur(3px);
+}
+
+.Top4 {
+    display: flex;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /*    background-color: skyblue;*/
+    width: 48.177vw;
+    height: 42px;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+.Top4-rect {
+    position: relative;
+    width: 48vw;
+    top: 0.625vw;
+    background: rgba(76, 71, 58, 0.7);
+    filter: blur(4px);
+}
+
+.Top5 {
+    display: flex;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /*    background-color: skyblue;*/
+    width: 45.573vw;
+    height: 42px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Top5-rect {
+    position: relative;
+    width: 46vw;
+    top: 0.625vw;
+    background: rgba(76, 71, 58, 0.6);
+    filter: blur(5px);
+}
+
+.Top6-rect {
+    position: relative;
+    width: 43vw;
+    top: 0.625vw;
+    background: rgba(76, 71, 58, 0.5);
+    filter: blur(6.5px);
+}
+
+.Top6 {
+    display: flex;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /*    background-color: skyblue;*/
+    width: 42.969vw;
+    height: 42px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Top7 {
+    display: flex;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /*    background-color: skyblue;*/
+    width: 40.365vw;
+    height: 42px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Top7-rect {
+    position: relative;
+    width: 40vw;
+    top: 0.625vw;
+    background: rgba(76, 71, 58, 0.4);
+    filter: blur(7.5px);
+}
+
+.Top8 {
+    display: flex;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /*    background-color: skyblue;*/
+    width: 37.760vw;
+    height: 42px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Top8-rect {
+    position: relative;
+    width: 37vw;
+    top: 0.625vw;
+    background: rgba(76, 71, 58, 0.2);
+    filter: blur(7.5px);
+}
+
+.Top9 {
+    display: flex;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /*    background-color: skyblue;*/
+    width: 35.156vw;
+    height: 42px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Top9-rect {
+    position: relative;
+    width: 35vw;
+    top: 0.625vw;
+    background: rgba(76, 71, 58, 0.1);
+    filter: blur(10px);
 }
 
 sum-text {
