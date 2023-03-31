@@ -91,7 +91,7 @@ intro-presentation {
 intro-breath {
     display: block;
     justify-content: center;
-    background-color:#0D0C07 ;
+    background-color: #0D0C07;
     position: relative;
     top: 5vh;
     padding: 6vh;
@@ -122,7 +122,7 @@ breath-content {
     height: 70vh;
     position: relative;
     top: 4vh;
-/*        background-color: mediumvioletred;*/
+    /*        background-color: mediumvioletred;*/
 }
 
 breath-content text-box {
@@ -137,7 +137,7 @@ breath-content text-box {
     /*sketch*/
     position: relative;
     left: 8%;
-/*    background-color: aquamarine;*/
+    /*    background-color: aquamarine;*/
     z-index: 1;
 }
 
@@ -151,13 +151,13 @@ breath-content text-box {
 intro-listen {
     display: block;
     justify-content: center;
-/*    background-color: darkgreen;*/
+    /*    background-color: darkgreen;*/
     position: relative;
     top: 5vh;
     padding: 6vh;
 }
 
-#listen-title{
+#listen-title {
     font-weight: bold;
     font-size: 2.5em;
     position: relative;
@@ -165,33 +165,105 @@ intro-listen {
 }
 
 listen-content {
-     display: flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
-        padding: 20px;
+    padding: 20px;
     grid-row-gap: 4.479vw;
     /*    position: absolute;*/
     width: 100vw-6vh;
-/*    background-color: darkgoldenrod;*/
+    /*    background-color: darkgoldenrod;*/
     height: 80vh;
-      position: relative;
+    position: relative;
     top: 1vh;
 }
 
-listen-content text-box{
+listen-content text-box {
     margin-left: 17%;
     position: relative;
     top: -10%;
-    width: 36vw;;
+    width: 36vw;
+    ;
 }
 
 #sketch-listen {
     /*sketch*/
     position: relative;
     left: 5%;
-/*    background-color: aquamarine;*/
+    /*    background-color: aquamarine;*/
     z-index: 1;
 }
+
+intro-heal {
+    display: flex;
+    justify-content: center;
+/*        background-color: darkgreen;*/
+    position: relative;
+    top: 5vh;
+    padding: 6vh;
+    height: 100vh;
+/*    background-color: royalblue;*/
+}
+
+#heal-title {
+    font-weight: bold;
+    font-size: 2.5em;
+    position: relative;
+    left: 75%;
+}
+
+.staircase {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+/*    background-color: coral;*/
+    width: 55.990vw;
+
+    margin:auto;
+}
+
+.Top1 {
+    display: flex;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+/*    background-color: skyblue;*/
+    width: 55.990vw; 
+    height: 42px;
+    justify-content: center;
+
+
+}
+
+.Top1-rect {
+    position: relative;
+    width: 56vw; 
+    top: 0.625vw;
+    background: #4C473A;
+    filter: blur(2.5px);
+    border-radius: 5px;
+}
+
+sum-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6em;
+    line-height: 100%;
+    /* identical to box height, or 32px */
+
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    z-index: 1;
+}
+
+
 
 .ellipse-breath {
     position: absolute;

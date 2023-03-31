@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="main.js"></script>
     <script src="sketch.js"></script>
-    <script src="soundline.js"></script>
+<!--    <script src="soundline.js"></script>-->
 
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,18 +52,6 @@
                 </defs>
             </svg>
         </wave-top>
-        <!--
-       <dive-content>
-           <dive-presentation>
-               <dive-slides>
-                    <video autoplay loop muted>
-                     <source src="assets/nogradient-wave.mp4" type="video/mp4">
-                       Your browser does not support the video tag.
-                   </video>
-               </dive-slides>
-           </dive-presentation>
-       </dive-content>
--->
 
         <intro-content>
             <intro-presentation>
@@ -85,15 +73,31 @@
                     <listen-content>
                         <div class="ellipse-listen"></div>
                         <div id="sketch-listen"></div>
-                            <text-box class="paragraph">
-                                <p>Sand on plates resonating at varying frequencies take on captivating two-dimensional standing wave patterns, characterized by distinct nodes. The accompanying interactive offers a graphical depiction of these nodal patterns across a range of frequencies. This is how we will create architecture using sound as impactful material.</p>
-                            </text-box>
+                        <text-box class="paragraph">
+                            <p>Sand on plates resonating at varying frequencies take on captivating two-dimensional standing wave patterns, characterized by distinct nodes. The accompanying interactive offers a graphical depiction of these nodal patterns across a range of frequencies. This is how we will create architecture using sound as impactful material.</p>
+                        </text-box>
                     </listen-content>
                 </intro-listen>
+
+                <intro-heal>
+                    <text-box id="heal-title">
+                        Feel.
+                    </text-box>
+                    <div class="staircase">
+                        <div class="Top1">
+                            <sum-text>            40Hz&amp;H20 is a spatial audio performance inspired by research about
+                            </sum-text>
+                            <div class = "Top1-rect"></div>
+                        </div>
+                    </div>
+                </intro-heal>
+
+                <!--
                 <intro-slides>
                     <intro-title> Welcome </intro-title>
                     <intro-title class="side-text">to</intro-title>
                 </intro-slides>
+-->
             </intro-presentation>
         </intro-content>
 
