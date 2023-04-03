@@ -21,45 +21,54 @@ body {
 - header 146-206
 */
 
-/*dive page lines 17-44*/
 
-/*
-
-dive-content {
-    width: 100vw;
-    height: 100vh;
-    display: block;
-        background-image: url("assets/Untitled_Artwork.mp4");
+body {
+  background: #000;
 }
 
-dive-slides {
-    left: 0%;
-    top: 0%;
-    width: 100vw;
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%;
 }
 
-dive-slides:before {
-    height: 60vh;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), #0D0C07);
-    background-size: 100% 100%;
-    transform: translateY(67%);
+.arrow {
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px #fff solid;
+  border-bottom: 2px #fff solid;
 }
 
-dive-slides > video {
-
-    height: 100vh;
-    width: 100vw;
-
-    object-fit: cover;
-    overflow: hidden;
+.arrow:before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
 }
-*/
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-20px, -20px);
+  }
+}
 
 
 /*intro page lines 55-122*/
@@ -72,7 +81,7 @@ intro-content {
     background-color: #0D0C07;
     width: 100vw;
     /*    top: -10px;*/
-    height: 500vh;
+    height: 350vh;
 }
 
 intro-presentation {
@@ -131,6 +140,8 @@ breath-content text-box {
     position: relative;
     top: -20%;
     width: 40vw;
+    opacity: 0;
+    /*    transform: translateY(50px);*/
 }
 
 #sketch-breath {
@@ -146,7 +157,59 @@ breath-content text-box {
     font-size: 2.5em;
     position: relative;
     left: 4%;
+    transform: translateX(-50px);
+    opacity: 0;
+    /*    background-color: red;*/
 }
+
+intro-breath.active #breath-title {
+    animation: fade-out 0.9s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    position: relative;
+    animation-timing-function: ease-in;
+
+}
+
+intro-breath.active breath-content text-box {
+    animation: fade-out .9s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    opacity: 0;
+    animation-timing-function: ease-out;
+}
+
+/*fade animation*/
+@keyframes fade-out {
+    0% {
+        opacity: 0;
+        filter: blur(0);
+        transform: scale(0.98);
+
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(10);
+        transform: scale(1);
+
+    }
+}
+
+/* slide-in animation */
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(-25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 intro-listen {
     display: block;
@@ -155,13 +218,26 @@ intro-listen {
     position: relative;
     top: 5vh;
     padding: 6vh;
+    transform: none;
 }
+
+intro-listen.active2 #listen-title {
+    animation: fade-out 0.9s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    width: min-content;
+    height: min-content;
+    position: relative;
+    animation-timing-function: ease-in;
+}
+
 
 #listen-title {
     font-weight: bold;
     font-size: 2.5em;
     position: relative;
     left: 37%;
+    opacity: 0;
+    width: min-content;
+    height: min-content;
 }
 
 listen-content {
@@ -178,11 +254,18 @@ listen-content {
     top: 1vh;
 }
 
+intro-listen.active2 listen-content text-box {
+    animation: fade-out .9s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    opacity: 0;
+    animation-timing-function: ease-out;
+}
+
 listen-content text-box {
     margin-left: 17%;
     position: relative;
     top: -10%;
     width: 36vw;
+    opacity: 0;
     ;
 }
 
@@ -205,11 +288,18 @@ intro-heal {
     /*    background-color: royalblue;*/
 }
 
+intro-heal.active2 #heal-title {
+    animation: fade-out 0.9s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    position: relative;
+    animation-timing-function: ease-in;
+}
+
 #heal-title {
     font-weight: bold;
     font-size: 2.5em;
     position: relative;
     left: 75%;
+    opacity: 0;
 }
 
 .staircase {
@@ -219,13 +309,17 @@ intro-heal {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-/*    background-color: coral;*/
     width: 57vw;
     top: 20%;
-
-
     margin: auto;
+    opacity: 0;
+
 }
+
+.staircase.active {
+    animation: fade-in 1500ms ease-out forwards;
+}
+
 
 .Top1 {
     display: flex;
@@ -236,9 +330,16 @@ intro-heal {
     width: 55.990vw;
     height: 42px;
     justify-content: center;
-
+    /*    animation-delay: 0ms;*/
 
 }
+
+.staircase.active .Top1 sum-text {
+    animation: up 500ms ease-out forwards;
+    /*    animation-delay: 100ms;*/
+    /*    overflow-y: hidden;*/
+}
+
 
 .Top1-rect {
     position: relative;
@@ -258,10 +359,16 @@ intro-heal {
     /*    background-color: skyblue;*/
     width: 53.385vw;
     height: 42px;
+    height: 42px;
     justify-content: center;
     margin-top: 30px;
 
+}
 
+.staircase.active .Top2 sum-text {
+    animation: up 500ms ease-out forwards;
+    animation-delay: 100ms;
+    /*    overflow-y: hidden;*/
 }
 
 .Top2-rect {
@@ -282,8 +389,6 @@ intro-heal {
     height: 42px;
     justify-content: center;
     margin-top: 30px;
-
-
 }
 
 .Top3-rect {
@@ -292,6 +397,11 @@ intro-heal {
     top: 0.625vw;
     background: rgba(76, 71, 58, 0.81);
     filter: blur(3px);
+}
+
+.staircase.active .Top3 sum-text {
+    animation: up 500ms ease-out forwards;
+    animation-delay: 200ms;
 }
 
 .Top4 {
@@ -315,6 +425,12 @@ intro-heal {
     filter: blur(4px);
 }
 
+.staircase.active .Top4 sum-text {
+    animation: up 500ms ease-out forwards;
+
+    animation-delay: 300ms;
+}
+
 .Top5 {
     display: flex;
     flex: none;
@@ -335,6 +451,12 @@ intro-heal {
     filter: blur(5px);
 }
 
+.staircase.active .Top5 sum-text {
+    animation: up 500ms ease-out forwards;
+
+    animation-delay: 400ms;
+}
+
 .Top6-rect {
     position: relative;
     width: 43vw;
@@ -353,6 +475,13 @@ intro-heal {
     height: 42px;
     justify-content: center;
     margin-top: 30px;
+
+}
+
+.staircase.active .Top6 sum-text {
+    animation: up 500ms ease-out forwards;
+
+    animation-delay: 500ms;
 }
 
 .Top7 {
@@ -373,6 +502,12 @@ intro-heal {
     top: 0.625vw;
     background: rgba(76, 71, 58, 0.4);
     filter: blur(7.5px);
+}
+
+.staircase.active .Top7 sum-text {
+    animation: up 500ms ease-out forwards;
+
+    animation-delay: 600ms;
 }
 
 .Top8 {
@@ -422,13 +557,72 @@ sum-text {
     line-height: 100%;
     /* identical to box height, or 32px */
 
-    display: flex;
+    display: block;
     align-items: center;
     text-align: justify;
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
     z-index: 1;
+    transform: translateY(15px);
+
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        width: 0px;
+        height: 1px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: -1;
+    }
+
+    &::before {
+        top: 1.4rem;
+        animation: draw 500ms linear 1s forwards;
+    }
+
+    &::after {
+        bottom: 0.4rem;
+        animation: draw 500ms linear 1s forwards;
+    }
+}
+
+
+.class-container {
+    font-size: 0;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0.4rem;
+}
+
+@keyframes up {
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fade-in {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+@keyframes draw {
+
+    100% {
+        width: 100%;
+    }
+
 }
 
 
@@ -474,13 +668,6 @@ intro-title {
 }
 
 
-intro-slides.active {
-    animation: fade-out 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    position: relative;
-    animation-timing-function: ease-in;
-
-}
-
 intro-title:nth-child(1) {
     font-size: 20vmin;
     color: white;
@@ -502,23 +689,6 @@ intro-title:nth-child(2) {
 }
 
 
-/*fade animation*/
-@keyframes fade-out {
-    0% {
-        opacity: 1;
-        filter: blur(0);
-        transform: scale(1);
-
-    }
-
-    100% {
-        opacity: 0;
-        filter: blur(10);
-        transform: scale(0.94);
-        transform: translate(5vmin, -5vmin);
-
-    }
-}
 
 /*Header page lines 146-206*/
 
@@ -544,9 +714,9 @@ header-page {
 }
 
 .header-slides.active2 {
-    animation: expand 3s .3s forwards cubic-bezier(0.25, 0.1, 0.25, 1);
+    animation: expand 5.4s .3s forwards cubic-bezier(0.25, 0.1, 0.25, 1);
     position: relative;
-    animation-timing-function: ease;
+    animation-timing-function: ease-out;
 
 }
 
