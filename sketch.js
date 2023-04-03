@@ -20,7 +20,10 @@ function draw() {
     
     fill(255);
 //    text("(" + mouseX/wi + ", " + mouseY/hei +")", mouseX, mouseY );
+    
 
+    //positions I set
+    translate(-100, 0);
     circles(wi*0.89, hei*0.60, 0, wi*0.125, 3, 1, 100); //big
     circles(wi*0.34, hei*0.43, 1000, wi*0.0425, 2, -1, 50); //medium
     circles(wi*0.72, hei*0.28, 2000, wi*0.0275, 1, 1, 200); //small
