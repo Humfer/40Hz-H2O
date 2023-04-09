@@ -329,7 +329,8 @@ intro-heal.active2 #heal-title {
     order: 0;
     flex-grow: 0;
     /*    background-color: skyblue;*/
-    width: 55.990vw;
+/*    55.990vw*/
+    width:55.990vw;
     height: 42px;
     justify-content: center;
     /*    animation-delay: 0ms;*/
@@ -555,7 +556,7 @@ intro-heal.active2 #heal-title {
 sum-text {
     font-style: normal;
     font-weight: 500;
-    font-size: 1.6em;
+    font-size: 1.71vw;
     line-height: 100%;
     /* identical to box height, or 32px */
 
