@@ -9,7 +9,7 @@ var s1 = function (sketch) {
     var hei;
 
     sketch.setup = function () {
-        wid = sketch.windowHeight * 0.6;
+        wid = sketch.windowWidth * 0.6;
         hei = wid;
         let canvas1 = sketch.createCanvas(wid, hei);
         // canvas1.position(0,0);
@@ -81,7 +81,7 @@ let s2 = function (sketcha) {
     //    }
 
     sketcha.setup = function () {
-        wi = sketcha.windowHeight * 0.55;
+        wi = sketcha.windowWidth * 0.55;
         hei = wi;
         let canvas2 = sketcha.createCanvas(wi, hei);
         canvas2.parent("sketch-listen");
