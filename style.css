@@ -347,8 +347,8 @@ intro-heal.active2 #heal-title {
 .Top1-rect {
     position: relative;
     width: 56vw;
-    height: 55px;
-    top: -.5vw;
+/*    height: 55px;*/
+  top: 0.625vw;
     background: #65A4CB;
     filter: blur(2.5px);
     border-radius: 5px;
@@ -387,7 +387,7 @@ intro-heal.active2 #heal-title {
     flex: none;
     order: 0;
     flex-grow: 0;
-    /*    background-color: skyblue;*/
+/*        background-color: skyblue;*/
     width: 50.781vw;
     height: 42px;
     justify-content: center;
