@@ -9,7 +9,7 @@ var s1 = function (sketch) {
     var hei;
 
     sketch.setup = function () {
-        wid = sketch.windowWidth * 0.6;
+        wid = sketch.windowWidth * 0.3;
         hei = wid;
         let canvas1 = sketch.createCanvas(wid, hei);
         // canvas1.position(0,0);
@@ -80,80 +80,57 @@ let s2 = function (sketcha) {
     //        });
     //    }
 
-    sketcha.setup = function () {
-        wi = sketcha.windowWidth * 0.55;
-        hei = wi;
-        let canvas2 = sketcha.createCanvas(wi, hei);
-        canvas2.parent("sketch-listen");
-        sketcha.strokeWeight(2);
-        sketcha.preload();
+  sketcha.setup = function () {
+    wi = sketcha.windowWidth * 0.3;
+    hei = wi;
+    let canvas2 = sketcha.createCanvas(wi, hei);
+    canvas2.parent("sketch-listen");
+    sketcha.strokeWeight(2);
+    sketcha.preload();
+}
+
+sketcha.draw = function () {
+    var targetX = posX;
+    var targetY = posY;
+
+    if (sketcha.mouseIsPressed && sketcha.mouseX > 0 && sketcha.mouseX < sketcha.width && sketcha.mouseY > 0 && sketcha.mouseY < sketcha.height) {
+        targetX = sketcha.mouseX;
+        targetY = sketcha.mouseY;
     }
 
-    sketcha.draw = function () {
-        var targetX = sketcha.mouseX;
-        var targetY = sketcha.mouseY;
+    posX += (targetX - posX) * easing;
+    posY += (targetY - posY) * easing;
+    var a = sketcha.map(posX, 0, sketcha.width, -10, 10); // replace with your desired value
+    var b = 1; // replace with your desired value
+    var m = sketcha.map(posY, 0, sketcha.width, -10, 10); // replace with your desired value
+    var n = 2; // replace with your desired value
+    var gridSize = 6;
+    var halfWidth = sketcha.width / 2;
+    var halfHeight = sketcha.height / 2;
 
-        //        if (sketcha.mouseX < 0 || sketcha.mouseX >= sketcha.width || sketcha.mouseY <= 0 || sketcha.mouseY > sketcha.height) {
-        //            hz161.stop();
-        //            hz89.stop();
-        //            hz230.stop();
-        //            hz346.stop();
-        //            hz478.stop();
-        //            hz590.stop();
-        //        } else if (sketcha.mouseX >= (sketcha.width * 5) / 6) {
-        //            playSound(hz89);
-        //        } else if (sketcha.mouseX >= (sketcha.width * 2) / 3) {
-        //            hz89.stop();
-        //            playSound(hz161);
-        //            hz230.stop();
-        //        } else if (sketcha.mouseX >= sketcha.width / 2) {
-        //            hz161.stop();
-        //            playSound(hz230);
-        //            hz478.stop();
-        //        } else if (sketcha.mouseX >= sketcha.width / 3) {
-        //            hz230.stop();
-        //            playSound(hz478);
-        //            hz590.stop();
-        //        } else if (sketcha.mouseX > 0) {
-        //            hz478.stop();
-        //            playSound(hz590);
-        //        } else {
-        //            hz590.stop();
-        //        }
-
-        posX += (targetX - posX) * easing;
-        posY += (targetY - posY) * easing;
-        var a = sketcha.map(posX, 0, sketcha.width, -10, 10); // replace with your desired value
-        var b = 1; // replace with your desired value
-        var m = sketcha.map(posY, 0, sketcha.width, -10, 10); // replace with your desired value
-        var n = 2; // replace with your desired value
-        var gridSize = 6;
-        var halfWidth = sketcha.width / 2;
-        var halfHeight = sketcha.height / 2;
-
-        sketcha.background(13, 12, 7);
-        for (var x = -halfWidth; x < halfWidth; x += gridSize) {
-            for (var y = -halfHeight; y < halfHeight; y += gridSize) {
-                var x1 = x + halfWidth;
-                var y1 = y + halfHeight;
-                var equationValue =
-                    a * sketcha.sin((sketcha.PI * n * x1) / 180) * sketcha.sin((sketcha.PI * m * y1) / 180) +
-                    b * sketcha.sin((sketcha.PI * m * x1) / 180) * sketcha.sin((sketcha.PI * n * y1) / 180);
-                var hue = equationValue < 0 ? 0 : 200; // color negative values red, positive values blue
-                var saturation = 1;
-                var brightness = 1;
-                sketcha.fill(101, 164, 203, hue);
-                sketcha.noStroke(); // disable filling
-                sketcha.ellipse(x1, y1, gridSize, gridSize); // draw rectangle instead of square
-            }
+    sketcha.background(13, 12, 7);
+    for (var x = -halfWidth; x < halfWidth; x += gridSize) {
+        for (var y = -halfHeight; y < halfHeight; y += gridSize) {
+            var x1 = x + halfWidth;
+            var y1 = y + halfHeight;
+            var equationValue =
+                a * sketcha.sin((sketcha.PI * n * x1) / 180) * sketcha.sin((sketcha.PI * m * y1) / 180) +
+                b * sketcha.sin((sketcha.PI * m * x1) / 180) * sketcha.sin((sketcha.PI * n * y1) / 180);
+            var hue = equationValue < 0 ? 0 : 200; // color negative values red, positive values blue
+            var saturation = 1;
+            var brightness = 1;
+            sketcha.fill(101, 164, 203, hue);
+            sketcha.noStroke(); // disable filling
+            sketcha.ellipse(x1, y1, gridSize, gridSize); // draw rectangle instead of square
         }
     }
-    sketcha.playSound = function (sound) {
-        if (!sound.isPlaying()) {
-            sound.play();
-        }
-    }
+}
 
+sketcha.playSound = function (sound) {
+    if (!sound.isPlaying()) {
+        sound.play();
+    }
+}
 }
 
 

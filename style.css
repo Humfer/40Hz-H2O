@@ -14,6 +14,7 @@ body {
     overflow-x: hidden;
     background: none;
 
+
     /*    background-size: 100% 100%;*/
 }
 
@@ -25,51 +26,52 @@ body {
 
 
 body {
-  background: #000;
+    background: #000;
 }
 
 .arrow,
 .arrow:before {
-  position: absolute;
-  left: 50%;
+    position: absolute;
+    left: 50%;
 }
 
 .arrow {
-  width: 60px;
-  height: 60px;
-  top: 50%;
-  margin: -20px 0 0 -20px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  border-left: none;
-  border-top: none;
-  border-right: 2px #fff solid;
-  border-bottom: 2px #fff solid;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    margin: -20px 0 0 -20px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
 }
 
 .arrow:before {
-  content: '';
-  width: 40px;
-  height: 40px;
-  top: 50%;
-  margin: -10px 0 0 -10px;
-  border-left: none;
-  border-top: none;
-  border-right: 1px #fff solid;
-  border-bottom: 1px #fff solid;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: arrow;
+    content: '';
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
 }
 
 @keyframes arrow {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-20px, -20px);
-  }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-20px, -20px);
+    }
 }
 
 
@@ -81,7 +83,7 @@ intro-content {
     display: block;
     /*    background-color: lightgray;*/
     background-color: #0D0C07;
-    width: 100vw;
+    /*    width: 100vw;*/
     /*    top: -10px;*/
     height: 350vh;
 }
@@ -118,27 +120,26 @@ text-box {
     display: flex;
     align-items: center;
     font-weight: 400;
-    font-size: 1.4em;
 }
 
 breath-content {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /*    padding: 20px;*/
+
     grid-row-gap: 4.479vw;
     display: flex;
-    /*    position: absolute;*/
+
     width: 100vw;
-    height: 70vh;
     position: relative;
     top: 4vh;
     /*        background-color: mediumvioletred;*/
+    /*    padding: 20px;*/
+    /*    position: absolute;*/
 }
 
 breath-content text-box {
     /*    margin-right: 5%;*/
-    margin-left: 7%;
     position: relative;
     top: -20%;
     width: 40vw;
@@ -148,8 +149,8 @@ breath-content text-box {
 
 #sketch-breath {
     /*sketch*/
-    position: relative;
-    left: 8%;
+    position: absolute;
+    left: 60%;
     /*    background-color: aquamarine;*/
     z-index: 1;
 }
@@ -159,7 +160,7 @@ breath-content text-box {
     font-size: 2.5em;
     position: relative;
     left: 4%;
-    transform: translateX(-50px);
+    /*    transform: translateX(-50px);*/
     opacity: 0;
     /*    background-color: red;*/
 }
@@ -219,7 +220,6 @@ intro-listen {
     /*    background-color: darkgreen;*/
     position: relative;
     top: 5vh;
-    padding: 6vh;
     transform: none;
 }
 
@@ -244,14 +244,10 @@ intro-listen.active2 #listen-title {
 
 listen-content {
     display: flex;
-    flex-direction: row;
     align-items: center;
     padding: 20px;
-    grid-row-gap: 4.479vw;
     /*    position: absolute;*/
-    width: 100vw-6vh;
     /*    background-color: darkgoldenrod;*/
-    height: 80vh;
     position: relative;
     top: 1vh;
 }
@@ -309,11 +305,11 @@ intro-heal.active2 #heal-title {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /*    background-color: beige;*/
     align-items: center;
-    padding: 20px;
     width: 57vw;
     top: 20%;
-    margin: auto;
+    margin-right: 27%;
     opacity: 0;
 
 }
@@ -328,9 +324,9 @@ intro-heal.active2 #heal-title {
     flex: none;
     order: 0;
     flex-grow: 0;
-    /*    background-color: skyblue;*/
-/*    55.990vw*/
-    width:55.990vw;
+    /*        background-color: skyblue;*/
+    /*    55.990vw*/
+    width: 55.990vw;
     height: 42px;
     justify-content: center;
     /*    animation-delay: 0ms;*/
@@ -347,8 +343,8 @@ intro-heal.active2 #heal-title {
 .Top1-rect {
     position: relative;
     width: 56vw;
-/*    height: 55px;*/
-  top: 0.625vw;
+    /*    height: 55px;*/
+    top: 0.625vw;
     background: #65A4CB;
     filter: blur(2.5px);
     border-radius: 5px;
@@ -359,7 +355,7 @@ intro-heal.active2 #heal-title {
     flex: none;
     order: 0;
     flex-grow: 0;
-    /*    background-color: skyblue;*/
+    /*        background-color: skyblue;*/
     width: 53.385vw;
     height: 42px;
     height: 42px;
@@ -378,7 +374,7 @@ intro-heal.active2 #heal-title {
     position: relative;
     width: 54vw;
     top: 0.625vw;
-    background: rgba(101,164,203, 0.9);
+    background: rgba(101, 164, 203, 0.9);
     filter: blur(2px);
 }
 
@@ -387,7 +383,7 @@ intro-heal.active2 #heal-title {
     flex: none;
     order: 0;
     flex-grow: 0;
-/*        background-color: skyblue;*/
+    /*        background-color: skyblue;*/
     width: 50.781vw;
     height: 42px;
     justify-content: center;
@@ -398,7 +394,7 @@ intro-heal.active2 #heal-title {
     position: relative;
     width: 51vw;
     top: 0.625vw;
-    background: rgba(101,164,203, 0.81);
+    background: rgba(101, 164, 203, 0.81);
     filter: blur(3px);
 }
 
@@ -412,7 +408,7 @@ intro-heal.active2 #heal-title {
     flex: none;
     order: 0;
     flex-grow: 0;
-    /*    background-color: skyblue;*/
+    /*        background-color: skyblue;*/
     width: 48.177vw;
     height: 42px;
     justify-content: center;
@@ -424,7 +420,7 @@ intro-heal.active2 #heal-title {
     position: relative;
     width: 48vw;
     top: 0.625vw;
-    background: rgba(101,164,203, 0.7);
+    background: rgba(101, 164, 203, 0.7);
     filter: blur(4px);
 }
 
@@ -439,7 +435,7 @@ intro-heal.active2 #heal-title {
     flex: none;
     order: 0;
     flex-grow: 0;
-    /*    background-color: skyblue;*/
+    /*        background-color: skyblue;*/
     width: 45.573vw;
     height: 42px;
     justify-content: center;
@@ -450,7 +446,7 @@ intro-heal.active2 #heal-title {
     position: relative;
     width: 46vw;
     top: 0.625vw;
-    background: rgba(101,164,203, 0.6);
+    background: rgba(101, 164, 203, 0.6);
     filter: blur(5px);
 }
 
@@ -464,7 +460,7 @@ intro-heal.active2 #heal-title {
     position: relative;
     width: 43vw;
     top: 0.625vw;
-    background: rgba(101,164,203, 0.5);
+    background: rgba(101, 164, 203, 0.5);
     filter: blur(6.5px);
 }
 
@@ -473,7 +469,7 @@ intro-heal.active2 #heal-title {
     flex: none;
     order: 0;
     flex-grow: 0;
-    /*    background-color: skyblue;*/
+    /*        background-color: skyblue;*/
     width: 42.969vw;
     height: 42px;
     justify-content: center;
@@ -492,7 +488,7 @@ intro-heal.active2 #heal-title {
     flex: none;
     order: 0;
     flex-grow: 0;
-    /*    background-color: skyblue;*/
+    /*        background-color: skyblue;*/
     width: 40.365vw;
     height: 42px;
     justify-content: center;
@@ -503,7 +499,7 @@ intro-heal.active2 #heal-title {
     position: relative;
     width: 40vw;
     top: 0.625vw;
-    background: rgba(101,164,203, 0.4);
+    background: rgba(101, 164, 203, 0.4);
     filter: blur(7.5px);
 }
 
@@ -529,7 +525,7 @@ intro-heal.active2 #heal-title {
     position: relative;
     width: 37vw;
     top: 0.625vw;
-    background: rgba(101,164,203, 0.2);
+    background: rgba(101, 164, 203, 0.2);
     filter: blur(7.5px);
 }
 
@@ -549,20 +545,18 @@ intro-heal.active2 #heal-title {
     position: relative;
     width: 35vw;
     top: 0.625vw;
-    background: rgba(101,164,203, 0.1);
+    background: rgba(101, 164, 203, 0.1);
     filter: blur(10px);
 }
 
 sum-text {
     font-style: normal;
     font-weight: 500;
-    font-size: 1.71vw;
-    line-height: 100%;
+
     /* identical to box height, or 32px */
 
     display: block;
     align-items: center;
-    text-align: justify;
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
@@ -634,8 +628,9 @@ sum-text {
     position: absolute;
     width: 65vmin;
     height: 65vmin;
-    left: 50%;
     top: 0vh;
+    left: 50%;
+
     border-radius: 50%;
 
     background: radial-gradient(50% 50% at 50% 50%, rgba(13, 12, 7, 0.72) 72.92%, #65A4CB 100%);
@@ -745,11 +740,11 @@ header-page {
     padding-right: 2em;
     padding-left: 2em;
     margin: 3%;
-    'Inter',
+    font-family: 'Inter',
     'sans-serif';
     font-style: italic;
     font-weight: bold;
-    font-size: 2vmin;
+    
 }
 
 .hero-text a {
@@ -783,6 +778,55 @@ header-page {
 
     100% {
         letter-spacing: 0.4em;
+    }
+}
+
+
+@media (min-width:900px) {
+    breath-content {
+        height: 70vh;
+    }
+
+    breath-content text-box {
+        margin-left: 7%;
+    }
+
+    .paragraph {
+        font-size: 1.4em;
+    }
+
+    #sketch-breath {
+        position: relative;
+        left: 8%;
+    }
+
+    intro-listen {
+        padding: 6vh;
+    }
+
+    listen-content {
+        flex-direction: row;
+        grid-row-gap: 4.479vw;
+        width: 100vw-6vh;
+        height: 80vh;
+
+    }
+
+    sum-text {
+        font-size: 1.71vw;
+        line-height: 100%;
+        text-align: justify;
+
+    }
+
+    .staircase {
+        padding: 20px;
+        margin-left: 20%;
+
+    }
+    
+    .hero-text button{
+        font-size: 2vmin;
     }
 }
 
