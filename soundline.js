@@ -30,8 +30,8 @@ var s1 = function (sketch) {
         //    console.log(sketch.getAudioContext().state);
         var vol = mic.getLevel();
         let which = sketch.frameCount % num;
-        let posY = sketch.map(vol, 0.0, 0.2, sketch.height, 0);
-        let posX = sketch.map(vol, 0.0, 0.2, sketch.width, 0);
+        let posY = sketch.map(vol, 0.0, 0.1, sketch.height, 0);
+        let posX = sketch.map(vol, 0.0, 0.1, sketch.width, 0);
         mx[which] = posX;
         my[which] = posY;
 
@@ -56,29 +56,29 @@ let s2 = function (sketcha) {
 
     var hz161, hz89, hz230, hz346, hz478, hz590;
 
-//    sketcha.preload = function () {
-//        // Load sounds here
-//        console.log("Loading sounds...");
-//        hz161 = sketcha.loadSound("assets/161Hz.mp3", function () {
-//            console.log("Loaded hz161");
-//        });
-//        hz89 = sketcha.loadSound("assets/89Hz.mp3", function () {
-//            console.log("Loaded hz89");
-//        });
-//        hz230 = sketcha.loadSound("assets/230Hz.mp3", function () {
-//            console.log("Loaded hz230");
-//        });
-//        hz346 = sketcha.loadSound("assets/346Hz.mp3", function () {
-//            console.log("Loaded hz346");
-//        });
-//        hz478 = sketcha.loadSound("assets/478hz.mp3", function () {
-//            console.log("Loaded hz478");
-//        });
-//
-//        hz590 = sketcha.loadSound("assets/590Hz.mp3", function () {
-//            console.log("Loaded hz590")
-//        });
-//    }
+    //    sketcha.preload = function () {
+    //        // Load sounds here
+    //        console.log("Loading sounds...");
+    //        hz161 = sketcha.loadSound("assets/161Hz.mp3", function () {
+    //            console.log("Loaded hz161");
+    //        });
+    //        hz89 = sketcha.loadSound("assets/89Hz.mp3", function () {
+    //            console.log("Loaded hz89");
+    //        });
+    //        hz230 = sketcha.loadSound("assets/230Hz.mp3", function () {
+    //            console.log("Loaded hz230");
+    //        });
+    //        hz346 = sketcha.loadSound("assets/346Hz.mp3", function () {
+    //            console.log("Loaded hz346");
+    //        });
+    //        hz478 = sketcha.loadSound("assets/478hz.mp3", function () {
+    //            console.log("Loaded hz478");
+    //        });
+    //
+    //        hz590 = sketcha.loadSound("assets/590Hz.mp3", function () {
+    //            console.log("Loaded hz590")
+    //        });
+    //    }
 
     sketcha.setup = function () {
         wi = sketcha.windowHeight * 0.55;
@@ -142,7 +142,7 @@ let s2 = function (sketcha) {
                 var hue = equationValue < 0 ? 0 : 200; // color negative values red, positive values blue
                 var saturation = 1;
                 var brightness = 1;
-                sketcha.fill(46, 134, 171, hue);
+                sketcha.fill(101, 164, 203, hue);
                 sketcha.noStroke(); // disable filling
                 sketcha.ellipse(x1, y1, gridSize, gridSize); // draw rectangle instead of square
             }
