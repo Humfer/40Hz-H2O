@@ -83,9 +83,9 @@ intro-content {
     display: block;
     /*    background-color: lightgray;*/
     background-color: #0D0C07;
+    height:400vw;
     /*    width: 100vw;*/
     /*    top: -10px;*/
-    height: 350vh;
 }
 
 intro-presentation {
@@ -120,6 +120,7 @@ text-box {
     display: flex;
     align-items: center;
     font-weight: 400;
+    font-size: 1.5em;
 }
 
 breath-content {
@@ -587,12 +588,15 @@ sum-text {
 }
 
 
+
+/*
 .class-container {
     font-size: 0;
     position: relative;
     overflow: hidden;
     padding-bottom: 0.4rem;
 }
+*/
 
 @keyframes up {
 
@@ -783,6 +787,10 @@ header-page {
 
 
 @media (min-width:900px) {
+    intro-content{
+            height: 350vh;
+
+    }
     breath-content {
         height: 70vh;
     }
@@ -813,7 +821,8 @@ header-page {
     }
 
     sum-text {
-        font-size: 1.71vw;
+/*        font-size: 1.71vw;*/
+        font-size:1.65em;
         line-height: 100%;
         text-align: justify;
 
